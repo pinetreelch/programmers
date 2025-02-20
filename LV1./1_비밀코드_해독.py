@@ -21,7 +21,35 @@
 # [2, 5, 7, 9, 10]	3개
 # [3, 4, 5, 6, 7]	3개
 
+from itertools import combinations
+
 
 def solution(n, q, ans):
     answer = 0
+
+    random_no = []
+
+    for i in range(1, 11):
+        random_no.append(i)
+
+    # 가능한 모든 비밀 코드 조합 생성  == > 여기까지는 알겠음
+    array = set(combinations(random_no, 5))
+
+    print(array)
+
     return answer
+
+
+print(
+    solution(
+        10,
+        [
+            [1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10],
+            [3, 7, 8, 9, 10],
+            [2, 5, 7, 9, 10],
+            [3, 4, 5, 6, 7],
+        ],
+        [2, 3, 4, 3, 3],
+    )
+)
