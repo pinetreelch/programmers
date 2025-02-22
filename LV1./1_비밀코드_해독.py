@@ -32,8 +32,19 @@ def solution(n, q, ans):
     for i in range(1, 11):
         random_no.append(i)
 
-    # 가능한 모든 비밀 코드 조합 생성  == > 여기까지는 알겠음
+    # 가능한 모든 비밀 코드 조합 중복없이 생성  == > 여기까지는 알겠음
     array = set(combinations(random_no, 5))
+
+    # 각 시도(q)와 시스템 응답(ans)에 대해 가능한 조합 필터링
+    for query, match_count in zip(q, ans):
+        possible_codes = {
+            code
+            for code in possible_codes
+            if sum(1 for num in query if num in code) == match_count
+        }
+
+    # 가능한 비밀 코드의 개수 반환
+    return len(possible_codes)
 
     print(array)
 
@@ -50,6 +61,6 @@ print(
             [2, 5, 7, 9, 10],
             [3, 4, 5, 6, 7],
         ],
-        [2, 3, 4, 3, 3],
+        [2, 3, 4, 3, 3],3
     )
 )
