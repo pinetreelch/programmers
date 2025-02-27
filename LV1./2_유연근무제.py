@@ -24,7 +24,7 @@ def solution(schedules, timelogs, startday):
     len_sch = len(schedules)
 
     cnt = startday
-    for day in range(7):
+    for day in range(71):
         if cnt == 8:
             cnt = 1
 
