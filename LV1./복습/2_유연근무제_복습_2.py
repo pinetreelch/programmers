@@ -9,7 +9,7 @@ def solution(schedules, timelogs, startday):
         else:
             days.append(i)
 
-    print(days)
+    print(days) 
 
     for time in schedules:
 
