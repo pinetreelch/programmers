@@ -1,5 +1,6 @@
 def solution(schedules, timelogs, startday):
 
+    answer = 0
     result = []
 
     start_day_set = startday
@@ -24,8 +25,11 @@ def solution(schedules, timelogs, startday):
                         result_p.append("X")
                     startday += 1
 
-            print(result_p)
+            if "X" not in result_p:
+                answer += 1
         break
+
+    return answer
 
 
 print(
