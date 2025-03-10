@@ -31,7 +31,7 @@ def solution(schedules, timelogs, startday):
         # 지각시간
         late_time_chk = late_time(desired_time)
 
-        print(timelogs[0])
+        # print(timelogs[0])
 
         # 한주동안 출석시간 배열 구하기
         # timelogs_real = get_time_logs(timelogs)
