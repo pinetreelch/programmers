@@ -1,3 +1,5 @@
+import itertools
+
 def solution(friends, gifts):
 
     # 친구들의 이름을 담은 1차원 문자열 배열 friends
@@ -11,7 +13,17 @@ def solution(friends, gifts):
 
     # 다음달에 가장 많은 선물을 받는 친구가 받을 선물의 수를 return 하도록 solution 함수를 완성해 주세요.
 
-    return 0
+    result = []
+
+    for item in gifts:
+        if result[item] is null:
+            result[item] = 0
+
+
+
+
+
+    return ''
 
 
 print(
